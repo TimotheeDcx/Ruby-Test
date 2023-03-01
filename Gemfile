@@ -61,7 +61,7 @@ group :development do
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
+  # gem "spring" test
 end
 
 group :test do
@@ -70,3 +70,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
