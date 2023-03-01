@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nompoke: MyString
+  typepoke: MyString
+  puissancepoke: 1
+
+two:
+  nompoke: MyString
+  typepoke: MyString
+  puissancepoke: 1
