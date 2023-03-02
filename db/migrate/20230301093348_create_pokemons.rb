@@ -1,4 +1,4 @@
-class CreatePokemons < ActiveRecord::Migration[7.0]
+class CreateIanimals < ActiveRecord::Migration[7.0]
   def change
     create_table :ianimals do |t|
       t.string :nompoke

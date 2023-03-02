@@ -1,4 +1,4 @@
-class PokemonsController < ApplicationController
+class IanimalsController < ApplicationController
   before_action :set_pokemon, only: %i[ show edit update destroy ]
 
   # GET /ianimals or /ianimals.json
@@ -52,7 +52,7 @@ class PokemonsController < ApplicationController
     @ianimal.destroy
 
     respond_to do |format|
-      format.html { redirect_to pokemons_url, notice: "Ianimal was successfully destroyed." }
+      format.html { redirect_to ianimals_url, notice: "Ianimal was successfully destroyed." }
       format.json { head :no_content }
     end
   end

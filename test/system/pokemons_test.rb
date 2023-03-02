@@ -1,17 +1,17 @@
 require "application_system_test_case"
 
-class PokemonsTest < ApplicationSystemTestCase
+class IanimalsTest < ApplicationSystemTestCase
   setup do
     @ianimal = ianimals(:one)
   end
 
   test "visiting the index" do
-    visit pokemons_url
+    visit ianimals_url
     assert_selector "h1", text: "Ianimals"
   end
 
   test "should create ianimal" do
-    visit pokemons_url
+    visit ianimals_url
     click_on "New ianimal"
 
     fill_in "Nompoke", with: @ianimal.nompoke

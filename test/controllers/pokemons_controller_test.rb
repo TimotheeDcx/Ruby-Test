@@ -1,12 +1,12 @@
 require "test_helper"
 
-class PokemonsControllerTest < ActionDispatch::IntegrationTest
+class IanimalsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @ianimal = ianimals(:one)
   end
 
   test "should get index" do
-    get pokemons_url
+    get ianimals_url
     assert_response :success
   end
 
@@ -17,7 +17,7 @@ class PokemonsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ianimal" do
     assert_difference("Ianimal.count") do
-      post pokemons_url, params: { ianimal: { nompoke: @ianimal.nompoke, puissancepoke: @ianimal.puissancepoke, typepoke: @ianimal.typepoke } }
+      post ianimals_url, params: { ianimal: { nompoke: @ianimal.nompoke, puissancepoke: @ianimal.puissancepoke, typepoke: @ianimal.typepoke } }
     end
 
     assert_redirected_to pokemon_url(Ianimal.last)
@@ -43,6 +43,6 @@ class PokemonsControllerTest < ActionDispatch::IntegrationTest
       delete pokemon_url(@ianimal)
     end
 
-    assert_redirected_to pokemons_url
+    assert_redirected_to ianimals_url
   end
 end

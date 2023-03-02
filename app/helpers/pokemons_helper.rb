@@ -1,2 +1,2 @@
-module PokemonsHelper
+module IanimalsHelper
 end
