@@ -1,1 +1,1 @@
-json.array! @pokemons, partial: "pokemons/pokemon", as: :pokemon
+json.array! @ianimals, partial: "ianimals/ianimal", as: :ianimal

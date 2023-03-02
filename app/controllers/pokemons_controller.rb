@@ -1,58 +1,58 @@
 class PokemonsController < ApplicationController
   before_action :set_pokemon, only: %i[ show edit update destroy ]
 
-  # GET /pokemons or /pokemons.json
+  # GET /ianimals or /ianimals.json
   def index
-    @pokemons = Pokemon.all
+    @ianimals = Ianimal.all
   end
 
-  # GET /pokemons/1 or /pokemons/1.json
+  # GET /ianimals/1 or /ianimals/1.json
   def show
   end
 
-  # GET /pokemons/new
+  # GET /ianimals/new
   def new
-    @pokemon = Pokemon.new
+    @ianimal = Ianimal.new
   end
 
-  # GET /pokemons/1/edit
+  # GET /ianimals/1/edit
   def edit
   end
 
-  # POST /pokemons or /pokemons.json
+  # POST /ianimals or /ianimals.json
   def create
-    @pokemon = Pokemon.new(pokemon_params)
+    @ianimal = Ianimal.new(pokemon_params)
 
     respond_to do |format|
-      if @pokemon.save
-        format.html { redirect_to pokemon_url(@pokemon), notice: "Pokemon was successfully created." }
-        format.json { render :show, status: :created, location: @pokemon }
+      if @ianimal.save
+        format.html { redirect_to pokemon_url(@ianimal), notice: "Ianimal was successfully created." }
+        format.json { render :show, status: :created, location: @ianimal }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @pokemon.errors, status: :unprocessable_entity }
+        format.json { render json: @ianimal.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /pokemons/1 or /pokemons/1.json
+  # PATCH/PUT /ianimals/1 or /ianimals/1.json
   def update
     respond_to do |format|
-      if @pokemon.update(pokemon_params)
-        format.html { redirect_to pokemon_url(@pokemon), notice: "Pokemon was successfully updated." }
-        format.json { render :show, status: :ok, location: @pokemon }
+      if @ianimal.update(pokemon_params)
+        format.html { redirect_to pokemon_url(@ianimal), notice: "Ianimal was successfully updated." }
+        format.json { render :show, status: :ok, location: @ianimal }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @pokemon.errors, status: :unprocessable_entity }
+        format.json { render json: @ianimal.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /pokemons/1 or /pokemons/1.json
+  # DELETE /ianimals/1 or /ianimals/1.json
   def destroy
-    @pokemon.destroy
+    @ianimal.destroy
 
     respond_to do |format|
-      format.html { redirect_to pokemons_url, notice: "Pokemon was successfully destroyed." }
+      format.html { redirect_to pokemons_url, notice: "Ianimal was successfully destroyed." }
       format.json { head :no_content }
     end
   end
@@ -60,11 +60,11 @@ class PokemonsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_pokemon
-      @pokemon = Pokemon.find(params[:id])
+      @ianimal = Ianimal.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def pokemon_params
-      params.require(:pokemon).permit(:nompoke, :typepoke, :puissancepoke, :image)
+      params.require(:ianimal).permit(:nompoke, :typepoke, :puissancepoke, :image)
     end
 end

@@ -2,7 +2,7 @@ require "test_helper"
 
 class PokemonsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @pokemon = pokemons(:one)
+    @ianimal = ianimals(:one)
   end
 
   test "should get index" do
@@ -15,32 +15,32 @@ class PokemonsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create pokemon" do
-    assert_difference("Pokemon.count") do
-      post pokemons_url, params: { pokemon: { nompoke: @pokemon.nompoke, puissancepoke: @pokemon.puissancepoke, typepoke: @pokemon.typepoke } }
+  test "should create ianimal" do
+    assert_difference("Ianimal.count") do
+      post pokemons_url, params: { ianimal: { nompoke: @ianimal.nompoke, puissancepoke: @ianimal.puissancepoke, typepoke: @ianimal.typepoke } }
     end
 
-    assert_redirected_to pokemon_url(Pokemon.last)
+    assert_redirected_to pokemon_url(Ianimal.last)
   end
 
-  test "should show pokemon" do
-    get pokemon_url(@pokemon)
+  test "should show ianimal" do
+    get pokemon_url(@ianimal)
     assert_response :success
   end
 
   test "should get edit" do
-    get edit_pokemon_url(@pokemon)
+    get edit_pokemon_url(@ianimal)
     assert_response :success
   end
 
-  test "should update pokemon" do
-    patch pokemon_url(@pokemon), params: { pokemon: { nompoke: @pokemon.nompoke, puissancepoke: @pokemon.puissancepoke, typepoke: @pokemon.typepoke } }
-    assert_redirected_to pokemon_url(@pokemon)
+  test "should update ianimal" do
+    patch pokemon_url(@ianimal), params: { ianimal: { nompoke: @ianimal.nompoke, puissancepoke: @ianimal.puissancepoke, typepoke: @ianimal.typepoke } }
+    assert_redirected_to pokemon_url(@ianimal)
   end
 
-  test "should destroy pokemon" do
-    assert_difference("Pokemon.count", -1) do
-      delete pokemon_url(@pokemon)
+  test "should destroy ianimal" do
+    assert_difference("Ianimal.count", -1) do
+      delete pokemon_url(@ianimal)
     end
 
     assert_redirected_to pokemons_url

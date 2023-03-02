@@ -1,2 +1,2 @@
-class Pokemon < ApplicationRecord
+class Ianimal < ApplicationRecord
 end

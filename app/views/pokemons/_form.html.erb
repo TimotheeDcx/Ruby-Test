@@ -1,10 +1,10 @@
-<%= form_with(model: pokemon) do |form| %>
-  <% if pokemon.errors.any? %>
+<%= form_with(model: ianimal) do |form| %>
+  <% if ianimal.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(pokemon.errors.count, "error") %> prohibited this pokemon from being saved:</h2>
+      <h2><%= pluralize(ianimal.errors.count, "error") %> prohibited this ianimal from being saved:</h2>
 
       <ul>
-        <% pokemon.errors.each do |error| %>
+        <% ianimal.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

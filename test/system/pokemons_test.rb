@@ -2,44 +2,44 @@ require "application_system_test_case"
 
 class PokemonsTest < ApplicationSystemTestCase
   setup do
-    @pokemon = pokemons(:one)
+    @ianimal = ianimals(:one)
   end
 
   test "visiting the index" do
     visit pokemons_url
-    assert_selector "h1", text: "Pokemons"
+    assert_selector "h1", text: "Ianimals"
   end
 
-  test "should create pokemon" do
+  test "should create ianimal" do
     visit pokemons_url
-    click_on "New pokemon"
+    click_on "New ianimal"
 
-    fill_in "Nompoke", with: @pokemon.nompoke
-    fill_in "Puissancepoke", with: @pokemon.puissancepoke
-    fill_in "Typepoke", with: @pokemon.typepoke
-    click_on "Create Pokemon"
+    fill_in "Nompoke", with: @ianimal.nompoke
+    fill_in "Puissancepoke", with: @ianimal.puissancepoke
+    fill_in "Typepoke", with: @ianimal.typepoke
+    click_on "Create Ianimal"
 
-    assert_text "Pokemon was successfully created"
+    assert_text "Ianimal was successfully created"
     click_on "Back"
   end
 
-  test "should update Pokemon" do
-    visit pokemon_url(@pokemon)
-    click_on "Edit this pokemon", match: :first
+  test "should update Ianimal" do
+    visit pokemon_url(@ianimal)
+    click_on "Edit this ianimal", match: :first
 
-    fill_in "Nompoke", with: @pokemon.nompoke
-    fill_in "Puissancepoke", with: @pokemon.puissancepoke
-    fill_in "Typepoke", with: @pokemon.typepoke
-    click_on "Update Pokemon"
+    fill_in "Nompoke", with: @ianimal.nompoke
+    fill_in "Puissancepoke", with: @ianimal.puissancepoke
+    fill_in "Typepoke", with: @ianimal.typepoke
+    click_on "Update Ianimal"
 
-    assert_text "Pokemon was successfully updated"
+    assert_text "Ianimal was successfully updated"
     click_on "Back"
   end
 
-  test "should destroy Pokemon" do
-    visit pokemon_url(@pokemon)
-    click_on "Destroy this pokemon", match: :first
+  test "should destroy Ianimal" do
+    visit pokemon_url(@ianimal)
+    click_on "Destroy this ianimal", match: :first
 
-    assert_text "Pokemon was successfully destroyed"
+    assert_text "Ianimal was successfully destroyed"
   end
 end
